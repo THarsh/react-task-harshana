@@ -1,0 +1,178 @@
+// header bar
+.header-wrapper {
+    padding: 20px 30px;
+    background-color: $white;
+    border-bottom: 1px solid $alice-blue;
+
+    .logo-wrapper,
+    .search-box-wrapper,
+    .date-time-wrapper,
+    .notifications-wrapper,
+    .user-profile-wrapper {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    // logo
+    .logo-wrapper {
+        width: 20%;
+        .logo {
+            float: left;
+            height: 50px;
+            width: auto;
+        }
+    }
+
+    //search boxwrapper
+    .search-box-wrapper {
+        width: 20%;
+        margin-right: 10%;
+    }
+
+    //date time
+    .date-time-wrapper {
+        width: 20%;
+        margin-right: 10%;
+    }
+
+    //notification
+    .notifications-wrapper {
+        .message,
+        .alert {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        // message icon
+        .message {
+            position: relative;
+            margin-right: 50px;
+            .envelope {
+                color: $black;
+                font-size: 20px;
+            }
+            span {
+                position: absolute;
+                top: -3px;
+                right: -3px;
+                height: 10px;
+                width: 10px;
+                border-radius: 50px;
+                background-color: $royal-blue;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: -5px;
+                    left: -4px;
+                    opacity: 0.5;
+                    height: 18px;
+                    width: 18px;
+                    border-radius: 50px;
+                    background-color: $royal-blue;
+                }
+            }
+        }
+
+        // alert icon
+        .alert {
+            position: relative;
+
+            .bell {
+                color: $black;
+                font-size: 20px;
+            }
+            span {
+                position: absolute;
+                top: -3px;
+                right: -3px;
+                height: 10px;
+                width: 10px;
+                border-radius: 50px;
+                background-color: $brink-pink;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: -5px;
+                    left: -4px;
+                    opacity: 0.5;
+                    height: 18px;
+                    width: 18px;
+                    border-radius: 50px;
+                    background-color: $brink-pink;
+                }
+            }
+        }
+    }
+
+    // user profile
+    .user-profile-wrapper {
+        float: right;
+        h6,
+        .profile-image {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .profile-image {
+            height: 40px;
+            width: auto;
+            margin-left: 10px;
+        }
+    }
+}
+
+//Media Queries
+
+// tabs
+@media (min-width: 768px) and (max-width: 991px) {
+    .header-wrapper {
+        .logo-wrapper {
+            width: 15%;
+            .logo {
+                height: 30px;
+            }
+        }
+        .date-time-wrapper,
+        .search-box-wrapper {
+            margin-right: 5%;
+        }
+        .user-profile-wrapper {
+            margin-top: -15px;
+        }
+    }
+}
+
+// Mobile
+@media (max-width: 767px) {
+    .header-wrapper {
+        padding: 15px;
+
+        // logo
+        .logo-wrapper {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        //search boxwrapper
+        .search-box-wrapper {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+
+        //date time
+        .date-time-wrapper {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+
+        // user profile
+        .user-profile-wrapper {
+            float: none;
+            margin-left: 140px;
+        }
+    }
+}

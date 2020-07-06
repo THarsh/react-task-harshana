@@ -1,0 +1,56 @@
+// search component
+.search-wrapper {
+    text-align: center;
+    background-color: $lavender;
+    padding: 10px;
+    border-radius: 10px;
+    //input
+    input {
+        width: 75%;
+        font-size: 16px;
+        font-family: $base-font;
+        margin-right: 9%;
+        border: none;
+        background-color: transparent;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    //button
+    .search-button {
+        cursor: pointer;
+        padding: 10px;
+        background-color: $green;
+        border-radius: 5px;
+        box-shadow: none;
+        outline: none;
+        border: none;
+
+        .icon {
+            color: $white;
+        }
+    }
+}
+
+//Media Queries
+
+// tabs
+@media (min-width: 768px) and (max-width: 991px) {
+    .search-wrapper {
+        padding: 5px;
+        input {
+            width: 64%;
+            font-size: 13px;
+            margin-right: 9%;
+        }
+        .search-button {
+            padding: 6px;
+        }
+    }
+}
+
+// Mobile
+@media (max-width: 767px) {
+}
